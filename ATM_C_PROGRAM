@@ -1,0 +1,43 @@
+#include<stdio.h>
+void main(){
+    float pin,bal,cr,db,crval,dbval,crtpin,choice;
+    crtpin=1234,bal=10000;
+    printf("ENTER YOUR SECRET PIN NUMBER:");
+    scanf("%f",&pin);
+    if(pin==crtpin){
+        printf("********Welcome to ATM Service**************:");
+      
+        printf("\n1.DEPOSIT CASH");
+        printf("\n2.WITHDRAW CASH");
+        printf("\n3.CHECK BALANCE");
+        printf("\nENTER YOUR CHOICE: ");
+        scanf("%f",&choice);
+        if(choice==1){
+            printf("ENTER THE AMOUNT TO DEPOSIT:");
+            scanf("%f",&cr);
+            printf("crediting:""%f",cr);
+            printf("\n YOUR BALANCE IN Rs :""%f",bal+cr);
+        }
+        else if(choice==2){
+            printf(" ENTER THE AMOUNT TO WITHDRAW:");
+            scanf("%f",&db);
+            if(db>=500){
+            printf("debeting:""%f",db);
+            printf("\n YOUR BALANCE IN Rs :""%f",bal-db);
+            }
+            else{
+                printf("PLEASE ENTER THE AMOUNT MORE THAN 500");
+            }
+        }
+        else if(choice==3){
+            printf(" YOUR BALANCE IN Rs :""%f",bal);
+        }
+        else{
+            printf("INVALID CHOICE");
+        }
+        }
+    else{
+        printf("PLEASE ENTER VALID PASSWORD");
+    }
+    printf("\n THANK U USING ATM");
+}
